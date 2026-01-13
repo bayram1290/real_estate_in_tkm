@@ -1,0 +1,152 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreatePropertiesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('properties', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('title');
+            $table->integer('rooms')->nullable()->default(NULL);
+            $table->integer('type_id');
+            $table->integer('object_names_id');
+            $table->integer('city_id');
+            $table->integer('velayat_id');
+            $table->string('address');
+            $table->integer('user_id')->unsigned();
+            $table->integer('profile_id')->unsigned();
+            $table->double('price')->nullable()->default(NULL);
+            $table->boolean('accepted')->default(0);
+            $table->boolean('featured');
+            $table->boolean('saleOrRent');
+            $table->string('lat')->default('37.9601');
+            $table->string('lng')->default('58.3261');
+            $table->integer('views')->unsigned()->default(0);
+            $table->double('area')->nullable()->default(NULL);
+            $table->integer('floor')->nullable()->default(NULL);
+            $table->integer('floors_in_home')->nullable()->default(NULL);
+            $table->double('land_area')->nullable()->default(NULL);
+            $table->string('img')->default(asset('/img/property_grid/tm_default_image.jpg'));
+            $table->integer('land_area_type_id')->nullable()->default(NULL);
+            $table->integer('parking_id')->nullable()->default(NULL);
+            $table->integer('parking_type_id')->nullable()->default(NULL);
+            $table->integer('bathroom_id')->nullable()->default(NULL);
+            $table->integer('floor_material_id')->nullable()->default(NULL);
+            $table->integer('gates_id')->nullable()->default(NULL);
+            $table->integer('type_property_id')->nullable()->default(NULL);
+            $table->integer('parking_spots')->nullable()->default(NULL);
+            $table->integer('parking_spots_ex')->nullable()->default(NULL);
+            $table->integer('sale_type_id')->nullable()->default(NULL);
+            $table->integer('bonus_agent_id')->nullable()->default(NULL);
+            $table->integer('tax_id')->nullable()->default(NULL);
+            $table->double('parking_price')->nullable()->default(NULL);
+            $table->integer('rent_type_id')->nullable()->default(NULL);
+            $table->integer('rent_term_id')->nullable()->default(NULL);
+            $table->integer('ventilation_id')->nullable()->default(NULL);
+            $table->integer('conditioning_id')->nullable()->default(NULL);
+            $table->integer('heating_id')->nullable()->default(NULL);
+            $table->integer('firefighting_id')->nullable()->default(NULL);
+            $table->integer('building_type_id')->nullable()->default(NULL);
+            $table->integer('entrance_id')->nullable()->default(NULL);
+            $table->integer('building_entrance_id')->nullable()->default(NULL);
+            $table->integer('revamp_id')->nullable()->default(NULL);
+            $table->integer('office_repair_id')->nullable()->default(NULL);
+            $table->integer('passenger_elevator')->nullable()->default(NULL);
+            $table->integer('service_elevator')->nullable()->default(NULL);
+            $table->integer('business_type_property_id')->nullable()->default(NULL);
+            $table->integer('trade_room_id')->nullable()->default(NULL);
+            $table->integer('land_status_id')->nullable()->default(NULL);
+            $table->integer('period_id')->nullable()->default(NULL);
+            $table->boolean('without_collateral')->nullable()->default(NULL);
+            $table->boolean('shop_window')->nullable()->default(NULL);
+            $table->string('from_hour')->nullable()->default(NULL);
+            $table->string('to_hour')->nullable()->default(NULL);
+            $table->boolean('from_dusk_till_dawn')->nullable()->default(NULL);
+            $table->integer('day_week_id')->nullable()->default(NULL);
+            $table->double('deposit_payment')->nullable()->default(NULL);
+            $table->string('village_name')->nullable()->default(NULL);            
+            $table->integer('elevator')->nullable()->default(NULL);
+            $table->integer('trivalator')->nullable()->default(NULL);
+            $table->integer('escalator')->nullable()->default(NULL);
+            $table->integer('prepayment')->nullable()->default(NULL);
+            $table->string('rent_part')->nullable()->default(NULL);
+            $table->double('living')->nullable()->default(NULL);
+            $table->double('kitchen_area')->nullable()->default(NULL);
+            $table->integer('num_beds')->nullable()->default(NULL);
+            $table->boolean('trade_enabled')->nullable()->default(NULL);
+            $table->integer('land_owning_type_id')->nullable()->default(NULL);
+            $table->boolean('comm_payment_included')->nullable()->default(NULL);
+            $table->boolean('explat_payment_included')->nullable()->default(NULL);
+            $table->integer('min_term')->nullable()->default(NULL);
+            $table->boolean('legal_address')->nullable()->default(NULL);
+            $table->unsignedTinyInteger('occupied')->nullable()->default(NULL);
+            $table->integer('wet_points')->nullable()->default(NULL);
+            $table->integer('price_unit_id')->default(2);
+            $table->integer('warehouse_service_elev')->nullable()->default(NULL);
+            $table->double('warehouse_service_elev_cc')->nullable()->default(NULL);
+            $table->integer('warehouse_telfer_elev')->nullable()->default(NULL);
+            $table->double('warehouse_telfer_elev_cc')->nullable()->default(NULL);
+            $table->integer('warehouse_passenger_elev')->nullable()->default(NULL);
+            $table->double('warehouse_passenger_elev_cc')->nullable()->default(NULL);
+            $table->integer('warehouse_bridge_crane')->nullable()->default(NULL);
+            $table->double('warehouse_bridge_crane_cc')->nullable()->default(NULL);
+            $table->integer('warehouse_balk_crane')->nullable()->default(NULL);
+            $table->double('warehouse_balk_crane_cc')->nullable()->default(NULL);
+            $table->integer('warehouse_rail_crane')->nullable()->default(NULL);
+            $table->double('warehouse_rail_crane_cc')->nullable()->default(NULL);
+            $table->integer('warehouse_goat_crane')->nullable()->default(NULL);
+            $table->double('warehouse_goat_crane_cc')->nullable()->default(NULL);
+            $table->integer('line_house')->nullable()->default(NULL);
+            $table->double('electric_power')->nullable()->default(NULL);
+            $table->integer('office_condition_id')->nullable()->default(NULL);
+            $table->boolean('furniture')->nullable()->default(NULL);
+            $table->boolean('equipment')->nullable()->default(NULL);
+            $table->double('building_area')->nullable()->default(NULL);
+            $table->boolean('in_parts')->nullable()->default(NULL);
+            $table->integer('construction_year')->nullable()->default(NULL);
+            $table->double('ceil_height')->nullable()->default(NULL);
+            $table->boolean('animals_allowed')->nullable()->default(NULL);
+            $table->boolean('children_allowed')->nullable()->default(NULL);
+            $table->boolean('for_family')->nullable()->default(NULL);
+            $table->boolean('for_single')->nullable()->default(NULL);
+            $table->string('building_class')->nullable()->default(NULL);
+            $table->integer('building_category')->nullable()->default(NULL);
+            $table->string('column_grid')->nullable()->default(NULL);
+            $table->double('monthly_profit')->nullable()->default(NULL);
+            $table->integer('apartment_type_id')->nullable()->default(NULL);
+            $table->unsignedTinyInteger('house_patent')->nullable()->default(NULL);
+            $table->unsignedTinyInteger('number_baths')->nullable()->default(NULL);
+            $table->unsignedTinyInteger('room_layout_type')->nullable()->default(NULL);
+            $table->unsignedTinyInteger('pool_in_building')->nullable()->default(NULL);
+            $table->unsignedTinyInteger('house_purchase_status')->nullable()->default(NULL);
+            $table->double('house_purchase_debt_amount')->nullable()->default(NULL);
+            $table->double('price_rate')->nullable()->default(NULL);
+            $table->integer('occup_month_id')->nullable()->default(NULL);
+            $table->integer('occup_year')->nullable()->default(NULL);
+            $table->integer('current_day_views')->nullable()->default(0);
+            $table->timestamp('current_day')->nullable()->useCurrent();
+            $table->timestamp('expiring_at')->nullable();
+            $table->softDeletes();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('properties');
+    }
+}

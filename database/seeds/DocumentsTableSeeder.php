@@ -1,0 +1,20 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class DocumentsTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        \App\Documents::create([
+            'rules' => '',
+            'license' => '',
+            'confidentiality' => ''
+        ]);
+    }
+}

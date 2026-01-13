@@ -1,0 +1,1 @@
+Нажмите на ссылку, чтобы подтвердить аккаунт: <a target="_blank" href="{{ $link = route('email-verification.check', $user->verification_token) . '?email=' . urlencode($user->email) }}">{{ $link }}</a>

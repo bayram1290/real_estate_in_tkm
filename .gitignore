@@ -1,0 +1,90 @@
+### Lara
+/vendor/
+/node_modules/
+/public/storage
+/storage/*.key
+/public/hot
+/public/storage
+/storage/clockwork/
+/storage/debugbar/
+/storage/logs/
+/storage/framework/cache/
+/storage/framework/sessions/
+/storage/framework/views/
+/storage/framework/testing/
+/.idea
+/.vscode
+/.vagrant
+Homestead.json
+Homestead.yaml
+.env
+.env.*.local
+.phpunit.result.cache
+
+### composer
+composer.phar
+composer.lock
+/vendor/
+
+### npm ###
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/node_modules/
+
+### os
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*~
+
+### phpstorm
+.idea/*
+
+### vs ide
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### tcg voyager
+#- assets
+/public/vendor/tcg/voyager/assets/
+/public/vendor/tcg/voyager/fonts/
+/public/vendor/tcg/voyager/js/
+/public/vendor/tcg/voyager/css/
+
+# voyager user uploads
+/public/storage/
+!/public/storage/.gitkeep
+
+# db backups and exports
+*.sql
+*.sqlite
+*.zip
+*.tar.gz
+
+### local files
+*.local
+*.log
+*.pid
+*.seed
+
+### test
+/coverage/
+.phpunit.result.cache
+
+### dara specific development
+/database/database.sqlite
+/database/*.sqlite
+
+config/services.php
+!config/services.php.example
+config/oauth-5-laravel.php
+!config/oauth-5-laravel.php.example
